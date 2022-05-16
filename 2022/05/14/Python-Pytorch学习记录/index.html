@@ -86,7 +86,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">1.1k</span>
+            <span class="post-count">1.2k</span>
         </span>
     </span>
 
@@ -148,14 +148,11 @@
 <p>总结一下就是说，dim是几就用index替换掉第几维的数据，其他维度保持不变。这个函数的用法看示例会更清晰一点。下面给出自己写的示例：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="built_in">input</span> = [</span><br><span class="line">    [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">0</span>, <span class="number">0</span>],</span><br><span class="line">    [<span class="number">1</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>],</span><br><span class="line">    [<span class="number">4</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">0</span>],</span><br><span class="line">    [<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>]</span><br><span class="line">]</span><br><span class="line"><span class="built_in">input</span> = torch.tensor(<span class="built_in">input</span>)</span><br><span class="line">index = [</span><br><span class="line">	[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],</span><br><span class="line">	[<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">]</span><br><span class="line">index = torch.tensor(index)</span><br><span class="line"><span class="built_in">print</span>(torch.gather(<span class="built_in">input</span>, <span class="number">1</span>, index))</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">tensor([[3, 4, 5],</span></span><br><span class="line"><span class="string">        [1, 4, 3]])</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(torch.gather(<span class="built_in">input</span>, <span class="number">0</span>, index))</span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">tensor([[1, 2, 0],</span></span><br><span class="line"><span class="string">        [2, 4, 2]])</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
 
+<h2 id="detach-的使用"><a href="#detach-的使用" class="headerlink" title="detach()的使用"></a>detach()的使用</h2><p>detach()返回一个新的tensor，这个tensor与原来的tensor共享同一块内存。但是这个tensor会从计算图中分离出来，requires_grad=False，即不参与梯度的计算。</p>
+<h2 id="gym环境安装"><a href="#gym环境安装" class="headerlink" title="gym环境安装"></a>gym环境安装</h2><p>对于mac用户来说，gym环境的安装可以直接执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -Ls https://raw.githubusercontent.com/andrewschreiber/scripts/master/gym_installer.sh)</span><br></pre></td></tr></table></figure>
 
-
-
-
-
-
-
-
+<p>具体参考：<a target="_blank" rel="noopener" href="https://andrewschrbr.medium.com/simple-setup-of-openai-gym-on-macos-287cf0194ac2">https://andrewschrbr.medium.com/simple-setup-of-openai-gym-on-macos-287cf0194ac2</a></p>
 <p>​        </p>
  
       <!-- reward -->
