@@ -6,6 +6,7 @@ image: /images/agilehumanoid25.png
 categories: research
 author: "Kangning Yin"
 authors: "<strong>Kangning Yin</strong>, <a >Yingguang Xing</a> , <a href=https://yaomarkmu.github.io/>Yao Mu</a>, <a href=https://people.iiis.tsinghua.edu.cn/~jychen/>Jianyu Chen</a>, <a href=https://sca.shanghaitech.edu.cn/sca_en/2020/0903/c7933a173623/page.htm>Zheng Tian</a>"
+venue: ""
 paper: "https://github.com/yinkangning0124/yinkangning0124.github.io/tree/main/resources/agilehumanoid.pdf"
 video: "https://github.com/yinkangning0124/yinkangning0124.github.io/tree/main/resources/agilehumanoid_video.mp4"
 ---
