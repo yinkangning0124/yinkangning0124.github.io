@@ -9,6 +9,5 @@ authors: "<strong>Kangning Yin</strong>, <a>Weishuai Zeng</a>, <a href=https://v
 <a href="https://wangjingbo1219.github.io/">Jingbo Wang</a>, <a href="https://oceanpang.github.io/">Jiangmiao Pang</a>, <a href="https://wnzhang.net/">Weinan Zhang</a>"
 venue: "In Submission"
 arxiv: "https://arxiv.org/abs/2507.07356"
+website: "https://yinkangning0124.github.io/Humanoid-UniTracker/"
 ---
-we introduce UniTracker, a simplified yet powerful framework that integrates a Conditional Variational
-Autoencoder (CVAE) into the student policy to explicitly model the latent diversity of human motion. The result is a single policy capable of tracking a wide spectrum of whole-body motions with high fidelity and stability.
