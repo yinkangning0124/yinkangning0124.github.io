@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Behavior Foundation Model for Humanoid Robots"
-date:   2025-08-17 22:21:59 +00:00
+date:   2025-08-18 22:21:59 +00:00
 image: /images/BFM/BFM_Teaser.png
 categories: research
 author: "Kangning Yin"
