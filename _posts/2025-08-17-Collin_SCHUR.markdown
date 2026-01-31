@@ -1,5 +1,3 @@
-
-
 ---
 layout: post
 title:  "Unveiling the Impact of Data and Model Scaling on High-Level Control for Humanoid Robots"
