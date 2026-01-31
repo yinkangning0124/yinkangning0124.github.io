@@ -11,3 +11,4 @@ arxiv: "https://arxiv.org/abs/2509.13780"
 paper: "https://arxiv.org/abs/2509.13780"
 website: "https://bfm4humanoid.github.io/"
 ---
+1
