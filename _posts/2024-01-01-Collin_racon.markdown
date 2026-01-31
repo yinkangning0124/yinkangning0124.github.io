@@ -9,4 +9,3 @@ authors: "<a href=https://yxmu.foo/>Yuxuan Mu</a>, <a href=https://jimmyzou.gith
 venue: "ICME (Oral)"
 arxiv: "http://arxiv.org/abs/2406.17795"
 ---
-We introduce an end-to-end hierarchical reinforcement learning method utilizes a task-oriented learnable retriever, a motion controller and a retrieval-augmented discriminator.

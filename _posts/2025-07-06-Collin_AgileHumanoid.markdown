@@ -10,4 +10,3 @@ venue: "Under Review"
 paper: "https://github.com/yinkangning0124/yinkangning0124.github.io/blob/main/resources/agilehumanoid.pdf"
 video: "https://github.com/yinkangning0124/yinkangning0124.github.io/tree/main/resources/agilehumanoid_video.mp4"
 ---
-We develop a motion optimization pipeline that refines motion capture data by explicitly considering the robot’s joint limits and torque constraints, ensuring the generation of physically feasible reference trajectories. Additionally, we propose an Autoencoder-based latent representation scheme that encodes expert demonstrations into privileged observations for cumulative reward estimation.

@@ -11,4 +11,3 @@ arxiv: "https://arxiv.org/abs/2403.00691"
 paper: "https://openaccess.thecvf.com/content/CVPR2024/papers/Yin_Tri-Modal_Motion_Retrieval_by_Learning_a_Joint_Embedding_Space_CVPR_2024_paper.pdf"
 website: "https://lavimo2023.github.io/LAVIMO/"
 ---
-we introduce LAVIMO (LAnguage-VIdeo-MOtion alignment), a novel framework for three-modality learning integrating human-centric videos as an additional modality, thereby effectively bridging the gap between text and motion.

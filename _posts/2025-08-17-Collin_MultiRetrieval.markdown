@@ -9,4 +9,3 @@ authors: "<a>Shiyao Yu</a>, <a>ZiAn Wang</a>, <strong>Kangning Yin</strong>, <a 
 venue: "IEEE TMM 2025 (JCR Q1)"
 arxiv: "https://arxiv.org/pdf/2507.23188?"
 ---
-We propose a four-modal motion retrieval framework that jointly aligns text, audio, video, and motion via sequence-level contrastive learning. By introducing audio and constructing new multimodal datasets, our method achieves substantial improvements over state-of-the-art baselines, demonstrating the potential of multimodal retrieval for advancing motion acquisition.
