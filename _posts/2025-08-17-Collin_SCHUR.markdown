@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Unveiling the Impact of Data and Model Scaling on High-Level Control for Humanoid Robots"
-date:   2026-08-19 22:21:59 +00:00
+date:   2026-01-19 22:21:59 +00:00
 image: /images/SCHUR/SCHUR_Teaser.png
 categories: research
 author: "Kangning Yin"

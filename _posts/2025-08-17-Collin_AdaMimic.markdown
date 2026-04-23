@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Towards Adaptable Humanoid Control via Adaptive Motion Tracking"
-date:   2026-08-20 22:21:59 +00:00
+date:   2026-01-20 22:21:59 +00:00
 image: /images/AdaMimic/AdaMimic_Teaser.png
 categories: research
 author: "Kangning Yin"

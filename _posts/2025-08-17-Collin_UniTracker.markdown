@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "UniTracker: Learning Universal Whole-Body Motion Tracker for Humanoid Robots"
-date:   2026-08-17 22:21:59 +00:00
+date:   2026-01-17 22:21:59 +00:00
 image: /images/UniTracker_Teaser/UniTracker_Teaser.gif
 categories: research
 author: "Kangning Yin"
