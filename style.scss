@@ -1,105 +1,357 @@
 ---
 ---
 
-//
-// IMPORTS
-//
+/* ------------------------------------------------------------------
+   Kangning Yin · personal site
+   Palette drawn from the harbour-mist portrait: cool paper, slate ink,
+   harbour blue for links, one warm signal reserved for awards.
+------------------------------------------------------------------- */
 
-//@import "reset";
-//@import "variables";
-// Syntax highlighting @import is at the bottom of this file
+:root {
+  --paper:      #F6F9FB;
+  --mist:       #DCEAF3;
+  --ink:        #18222D;
+  --ink-soft:   #4D5B69;
+  --ink-faint:  #8593A0;
+  --rule:       #DDE5EB;
+  --well:       #EAF0F4;
+  --link:       #1D5C9E;
+  --link-hover: #0E3D6E;
+  --signal:     #A8620F;
+  --signal-bg:  #FBF0E1;
 
-/**************/
-/* BASE RULES */
-/**************/
+  --sans: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --zh:   "Noto Serif SC", "Songti SC", serif;
+
+  --measure: 880px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper:      #121A22;
+    --mist:       #1B2A37;
+    --ink:        #E6EDF2;
+    --ink-soft:   #A9B6C2;
+    --ink-faint:  #73828F;
+    --rule:       #24323E;
+    --well:       #1A2530;
+    --link:       #8EBEF0;
+    --link-hover: #BFDBFA;
+    --signal:     #F0B266;
+    --signal-bg:  #2E2416;
+  }
+}
+
+/* ---------- Base ---------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  font-feature-settings: "kern", "liga";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
 a {
-  color: #1772d0;
+  color: var(--link);
   text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: color .15s ease, background-size .2s ease;
+}
+a:hover { color: var(--link-hover); background-size: 100% 1px; }
+a:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 3px;
+  border-radius: 3px;
 }
 
-a:focus,
-a:hover {
-  color: #f09228;
-  text-decoration: none;
+p { margin: 0 0 1em; }
+
+img, video { display: block; max-width: 100%; }
+
+/* The misty band that echoes the portrait's sky */
+.mist {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 560px;
+  background: linear-gradient(180deg, var(--mist) 0%, var(--paper) 100%);
+  z-index: -1;
 }
 
-body,
-td,
-th,
-tr,
-p,
-a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+.page {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 72px 28px 48px;
+}
+
+/* ---------- Intro ---------- */
+
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 56px;
+  align-items: start;
+}
+
+.name {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 18px;
+  line-height: 1;
+}
+.name-en {
+  font-size: clamp(40px, 6vw, 58px);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+}
+.name-zh {
+  font-family: var(--zh);
+  font-weight: 300;
+  font-size: clamp(24px, 3.4vw, 32px);
+  letter-spacing: 0.12em;
+  color: var(--ink-faint);
+}
+
+.role {
+  margin: 14px 0 28px;
+  font-size: 17px;
+  color: var(--ink-soft);
+}
+
+.bio p {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 62ch;
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+.contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px 7px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--paper) 70%, transparent);
+  color: var(--ink);
   font-size: 14px;
-  font-display: auto;
+  font-weight: 500;
+  background-image: none;
+  transition: border-color .15s ease, color .15s ease;
+}
+.contact a:hover { border-color: var(--link); color: var(--link); }
+.contact svg { width: 16px; height: 16px; flex: none; }
+
+.portrait { margin: 6px 0 0; }
+.portrait img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1136 / 1280;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 1px 0 var(--rule), 0 18px 40px -24px rgba(24, 50, 75, .45);
 }
 
-strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-  font-display: auto;
-}
+/* ---------- Section headings ---------- */
 
 h2 {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
-  font-display: auto;
-  font-weight: normal;
-  padding: 0px;
-  margin: 0px;
-  display:inline; 
-}
-
-h3 {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  margin: 0;
+  font-size: 24px;
   font-weight: 700;
-  font-display: auto;
-  padding: 0px;
-  margin: 0px;
-  display:inline; 
+  letter-spacing: -0.02em;
 }
 
-h1 {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 32px;
-  font-weight: normal;
-  font-display: auto;
-  text-align: center;
-  padding: 0px;
-  margin-block-start: 14px;
-  margin-block-end: 14px;
-  margin-left: 0px;
-  margin-right: 0px;
-
+.research {
+  margin-top: 72px;
+  padding-top: 28px;
+  border-top: 1px solid var(--rule);
+}
+.research .lede {
+  margin-top: 12px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 64ch;
 }
 
-.one {
-  width: 160px;
-  height: 160px;
-  position: relative;
+.pubs { margin-top: 56px; }
+
+.pubs-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--rule);
+}
+.pubs-head .note {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-faint);
 }
 
-.two {
-  width: 160px;
-  height: 160px;
-  position: absolute;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+/* ---------- Year groups ---------- */
+
+.year-group {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 0 24px;
+  padding-top: 28px;
+}
+.year-group + .year-group { padding-top: 0; }
+
+.year {
+  margin: 0;
+  position: sticky;
+  top: 20px;
+  align-self: start;
+  font-size: 15px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-faint);
 }
 
-.fade {
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
+.pub-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-span.highlight {
-  background-color: #ffffd0;
+/* ---------- Publication ---------- */
+
+.pub {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 24px;
+  padding: 0 0 32px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--rule);
+}
+.year-group:last-child .pub:last-child { border-bottom: 0; margin-bottom: 0; }
+
+.pub-media {
+  aspect-ratio: 16 / 10;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--well);
+  align-self: start;
+}
+.pub-media img,
+.pub-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #fff;
 }
 
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-//@import "highlights";
-//@import "svg-icons";
+.pub-title {
+  margin: 0 0 6px;
+  font-size: 17px;
+  font-weight: 650;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.pub-title a { color: inherit; }
+.pub-title a:hover { color: var(--link); }
+
+.authors {
+  margin: 0 0 6px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+.authors a { color: var(--ink-soft); }
+.authors a:hover { color: var(--link); }
+.authors strong {
+  color: var(--ink);
+  font-weight: 650;
+  box-shadow: inset 0 -0.38em 0 var(--mist);
+}
+
+.venue {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+.venue-name { font-style: italic; color: var(--ink); }
+.venue-tag {
+  padding: 1px 8px;
+  border-radius: 4px;
+  background: var(--signal-bg);
+  color: var(--signal);
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.abstract {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+/* ---------- Footer ---------- */
+
+.foot {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  font-size: 13px;
+  color: var(--ink-faint);
+}
+.foot a { color: var(--ink-soft); }
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 760px) {
+  .page { padding: 40px 20px 32px; }
+  .intro { grid-template-columns: 1fr; gap: 28px; }
+  .portrait { order: -1; max-width: 200px; }
+  .year-group { grid-template-columns: 1fr; }
+  .year { position: static; margin-bottom: 16px; }
+  .pub { grid-template-columns: 1fr; gap: 14px; }
+  .pub-media { max-width: 420px; }
+  .research { margin-top: 48px; }
+  .pubs { margin-top: 40px; }
+  .pubs-head { flex-direction: column; gap: 4px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+
+/* Author names without a homepage render as plain text */
+.authors a:not([href]) { color: inherit; background-image: none; cursor: default; }

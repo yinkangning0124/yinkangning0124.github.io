@@ -5,8 +5,8 @@ date:   2025-03-06 22:21:59 +00:00
 image: /images/agilehumanoid25.png
 categories: research
 author: "Kangning Yin"
-authors: "<strong>Kangning Yin</strong>, <a >Yingguang Xing</a> , <a href=https://yaomarkmu.github.io/>Yao Mu</a>, <a href=https://people.iiis.tsinghua.edu.cn/~jychen/>Jianyu Chen</a>, <a href=https://sca.shanghaitech.edu.cn/sca_en/2020/0903/c7933a173623/page.htm>Zheng Tian</a>"
+authors: "<strong>Kangning Yin</strong>, <a >Yingguang Xing</a>, <a href=https://yaomarkmu.github.io/>Yao Mu</a>, <a href=https://people.iiis.tsinghua.edu.cn/~jychen/>Jianyu Chen</a>, <a href=https://sca.shanghaitech.edu.cn/sca_en/2020/0903/c7933a173623/page.htm>Zheng Tian</a>"
 venue: "Under Review"
-paper: "https://github.com/yinkangning0124/yinkangning0124.github.io/blob/main/resources/agilehumanoid.pdf"
-video: "https://github.com/yinkangning0124/yinkangning0124.github.io/tree/main/resources/agilehumanoid_video.mp4"
+paper: "/resources/agilehumanoid.pdf"
+video: "/resources/agilehumanoid_video.mp4"
 ---
