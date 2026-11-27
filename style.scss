@@ -201,9 +201,10 @@ img, video { display: block; max-width: 100%; }
 .name-en {
   font-family: var(--display);
   font-size: clamp(42px, 6.4vw, 64px);
-  font-weight: 500;
-  font-variation-settings: "SOFT" 50, "opsz" 144;
-  letter-spacing: -0.025em;
+  font-weight: 450;
+  font-variation-settings: "SOFT" 0, "WONK" 0, "opsz" 72;
+  letter-spacing: -0.005em;
+  word-spacing: 0.08em;
   color: var(--ink);
 }
 .name-zh {
